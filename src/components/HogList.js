@@ -10,7 +10,9 @@ function HogList({ hogs, isSelected, setSelected }){
                 hogImage={hog.image} 
                 specialty={hog.specialty}
                 isSelected={isSelected}
-                setSelected={setSelected}/>)}
+                setSelected={setSelected}
+                weight={hog.weight}
+                greased={hog.greased}/>)}
         </div>
     )
 }
