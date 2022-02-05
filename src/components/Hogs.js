@@ -1,14 +1,19 @@
 import React from "react";
 
-function Hogs({ hogName, hogImage, specialty}){
+function Hogs({ hogName, hogImage, specialty, isSelected, setSelected }){
     function renderSpecialty(event){
-        const selectedContent = event.target.parentNode.parentNode.querySelector(".content")
-        const specialtyElement = document.createElement("div")
-            specialtyElement.className = "description"
-            specialtyElement.innerText = specialty
-            specialtyElement.key = `${hogName} description`
-        // console.log(selectedContent)
-        selectedContent.appendChild(specialtyElement)
+        const selectedContent = event.target.parentNode.parentNode.querySelector(".content") 
+        setSelected(!isSelected)
+        
+        
+        // const queryDescArray = selectedContent.querySelectorAll(".description")
+        // const specialtyElement = document.createElement("div")
+        //     specialtyElement.className = "description"
+        //     specialtyElement.innerText = specialty
+        //     specialtyElement.key = `${hogName} description`
+        //     // event.target.parentNode.parentNode.querySelector(".description")
+        // console.log(selectedContent.querySelectorAll(".description"))
+        // selectedContent.appendChild(specialtyElement)
     }
     
     return (
