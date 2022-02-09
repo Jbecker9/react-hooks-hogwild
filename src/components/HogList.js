@@ -1,11 +1,13 @@
 import React from "react";
 import Hogs from "./Hogs";
 
-function HogList({ hogs, setSelected }){
+function HogList({ pigs }){
     return (
+
         <div className="ui link cards">
-            {hogs.map((hog)=>
-                <Hogs key={hog.name} 
+            {pigs.map((hog)=>
+                <Hogs key={hog.name}
+                hog={hog}
                 hogName={hog.name} 
                 hogImage={hog.image} 
                 specialty={hog.specialty}

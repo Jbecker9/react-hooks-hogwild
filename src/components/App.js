@@ -4,16 +4,17 @@ import HogList from "./HogList";
 import hogs from "../porkers_data";
 
 function App() {
-	const [isSelected, setSelected] = useState(false)
 	const importedHogs = hogs.map((hog) => {
-		return {...hog,isSelected: false}
+		return {...hog, isSelected: false}
 	})
 	const [pigs, setPigs] = useState(importedHogs)
-	// console.log(hogs)
+	// console.log(pigs)
 	return (
 		<div className="App">
 			<Nav />
-			<HogList hogs={pigs} />
+			<HogList pigs={pigs}
+			setPigs={setPigs}
+			/>
 		</div>
 	);
 }

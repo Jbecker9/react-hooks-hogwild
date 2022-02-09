@@ -1,10 +1,12 @@
 import React from "react";
 import HogClickDisplay from "./HogClickDisplay";
 
-function Hogs({ hogName, hogImage, specialty, isSelected, setSelected, weight, greased }){
-    function handleClick(event){
-        debugger
-        (!isSelected)
+function Hogs({ hogName, hogImage, specialty, isSelected, weight, greased, hog }){
+
+
+    function handleClick(){
+        const clickedHog = {...hog, isSelected: !isSelected}
+        console.log(clickedHog)
     }
     
     return (
