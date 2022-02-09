@@ -4,7 +4,7 @@ import HogList from "./HogList";
 import hogs from "../porkers_data";
 
 function App() {
-	const [isSelected, setSelected] = useState(null)
+	const [isSelected, setSelected] = useState(false)
 	// console.log(hogs)
 	return (
 		<div className="App">
