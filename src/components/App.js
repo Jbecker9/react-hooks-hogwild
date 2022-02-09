@@ -5,13 +5,15 @@ import hogs from "../porkers_data";
 
 function App() {
 	const [isSelected, setSelected] = useState(false)
+	const importedHogs = hogs.map((hog) => {
+		return {...hog,isSelected: false}
+	})
+	const [pigs, setPigs] = useState(importedHogs)
 	// console.log(hogs)
 	return (
 		<div className="App">
 			<Nav />
-			<HogList hogs={hogs} 
-			isSelected={isSelected} 
-			setSelected={setSelected}/>
+			<HogList hogs={pigs} />
 		</div>
 	);
 }

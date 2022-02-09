@@ -1,7 +1,7 @@
 import React from "react";
 import Hogs from "./Hogs";
 
-function HogList({ hogs, isSelected, setSelected }){
+function HogList({ hogs, setSelected }){
     return (
         <div className="ui link cards">
             {hogs.map((hog)=>
@@ -9,8 +9,7 @@ function HogList({ hogs, isSelected, setSelected }){
                 hogName={hog.name} 
                 hogImage={hog.image} 
                 specialty={hog.specialty}
-                isSelected={isSelected}
-                setSelected={setSelected}
+                isSelected={hog.isSelected}
                 weight={hog.weight}
                 greased={hog.greased}/>)}
         </div>
