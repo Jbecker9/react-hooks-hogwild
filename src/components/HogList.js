@@ -5,7 +5,7 @@ function HogList({ pigs }){
     
     function handleClick(data){
         const selected = data.isSelected
-        const clickedHog = {...data, selected: !selected}
+        const clickedHog = {...data, isSelected: !selected}
         console.log(clickedHog)
     }
     return (
