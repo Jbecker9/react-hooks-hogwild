@@ -1,12 +1,12 @@
 import React from "react";
 import Hogs from "./Hogs";
 
-function HogList({ pigs }){
+function HogList({ pigs, setPigs }){
     
     function handleClick(data){
-        const selected = data.isSelected
-        const clickedHog = {...data, isSelected: !selected}
+        const clickedHog = [{...data, isSelected: !data.isSelected}, ...pigs.filter((pig) => pig !== data)]
         console.log(clickedHog)
+        setPigs(clickedHog)
     }
     return (
 
