@@ -5,9 +5,9 @@ function HogList({ pigs, setPigs }){
     
     function handleClick(data){
         const clickedHog = [{...data, isSelected: !data.isSelected}, ...pigs.filter((pig) => pig !== data)]
-        console.log(clickedHog)
         setPigs(clickedHog)
     }
+
     return (
 
 
@@ -20,6 +20,7 @@ function HogList({ pigs, setPigs }){
                 hogName={hog.name} 
                 hogImage={hog.image} 
                 specialty={hog.specialty}
+                highestMedal={hog["highest medal achieved"]}
                 isSelected={hog.isSelected}
                 weight={hog.weight}
                 greased={hog.greased}

@@ -1,6 +1,6 @@
 import React from "react";
 
-function HogClickDisplay({ specialty, weight, greased }){
+function HogClickDisplay({ weight, greased }){
     return (
         <div className="extra content">
             <span className="left floated">

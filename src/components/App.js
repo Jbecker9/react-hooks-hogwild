@@ -4,6 +4,7 @@ import HogList from "./HogList";
 import hogs from "../porkers_data";
 
 function App() {
+
 	const importedHogs = hogs.map((hog) => {
 		return {...hog, isSelected: false}
 	})
@@ -11,7 +12,7 @@ function App() {
 	// console.log(pigs)
 	return (
 		<div className="App">
-			<Nav />
+			<Nav/>
 			<HogList pigs={pigs}
 			setPigs={setPigs}
 			/>

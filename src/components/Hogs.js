@@ -1,7 +1,7 @@
 import React from "react";
 import HogClickDisplay from "./HogClickDisplay";
 
-function Hogs({ hogName, hogImage, specialty, isSelected, weight, greased, hog, handleClick }){
+function Hogs({ hogName, hogImage, specialty, isSelected, weight, greased, hog, handleClick, highestMedal }){
 
     function childClick(){
         handleClick(hog)
@@ -15,7 +15,16 @@ function Hogs({ hogName, hogImage, specialty, isSelected, weight, greased, hog, 
         </div>
         <div onClick={() => childClick()} key={hogName + "content"}className="content">
             <div key={hogName + "name"}className="header">{hogName}</div>
-            {isSelected ? <HogClickDisplay specialty={specialty} weight={weight} greased={greased}/> : null}
+            {isSelected ? 
+                <div className="meta">
+                <p>{highestMedal}</p>
+                </div> 
+                : null }
+            {isSelected ? 
+                <div className="description">
+                    {specialty}
+                </div> : null}
+            {isSelected ? <HogClickDisplay weight={weight} greased={greased}/> : null}
         </div>
     </div>
     )
